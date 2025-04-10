@@ -12,8 +12,12 @@ const readQuran=()=>{
   Navigation.navigate('Home')
 }
 
+const goToSettings = () => {
+  Navigation.navigate('Settings');
+};
+
      const createTwoButtonAlert = () => {
-    Alert.alert(  // ✅ Correct way to call Alert.alert
+    Alert.alert(  
       'Alert', 
       'Yes Pressed', 
       [
@@ -70,7 +74,7 @@ const readQuran=()=>{
               Book Mark
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={createTwoButtonAlert} style={styles.featuredBoxChild}>
+          <TouchableOpacity onPress={goToSettings} style={styles.featuredBoxChild}>
             <Icon name='cog' size={50} />
             <Text style={styles.featuredBoxText}>
               Settings
